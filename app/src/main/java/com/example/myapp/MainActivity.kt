@@ -5,6 +5,7 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
@@ -15,12 +16,14 @@ import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity(){
     lateinit var press: Button
+    lateinit var image: ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
         press= findViewById(R.id.button2)
+        image= findViewById(R.id.imageView)
 
         press.setOnClickListener {
             Toast.makeText(applicationContext,"You are signed up",
